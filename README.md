@@ -9,4 +9,4 @@ When you start it you will get asked for 2 inputs to make numbers and then it gi
 
 What are the features of this project?
 
-The features of this project is that it uses clean OOP structures, has a digit limit of 50000 to make huge calculations while keeping the program safe, saves data through JSON structures for history operations, has options to either enter new numbers or use the previous answer with a new number and uses a clean exit structure
+The features of this project is that it uses clean OOP structures, has a digit limit of 50000 to make huge calculations while keeping the program safe, saves data through JSON structures for history operations, has options to either enter new numbers or use the previous answer with a new number and uses a clean exit structure and has ID's as identifiers so it will be easier for the user to delete any operation they want
