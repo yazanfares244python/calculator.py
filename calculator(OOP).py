@@ -10,7 +10,7 @@ sys.set_int_max_str_digits(50000)
 # Creating the class that is responsible for the calculations
 class Calculator:
     # Initializing each variable thats gonna be used in this class
-    def __init__(self, operation, previous_answer, history: list, x, y):
+    def __init__(self):
         self.operation = None
         self.previous_answer = 0
         self.history = []
@@ -125,9 +125,9 @@ class Calculator:
 # Creating the class that is responsible for the history data saving
 class CalculatorHistory:
     # Initializing each variable thats gonna be used in this class
-    def __init__(self, history, previous_answer):
-        self.history = history
-        self.previous_answer = previous_answer
+    def __init__(self):
+        self.history = []
+        self.previous_answer = 0
     # Creating a function that reads data from the program
     def read_data(self):
         # Check if data exists
@@ -141,12 +141,12 @@ class CalculatorHistory:
 # Creating the class that is responsible for the inputs(CLI)
 class CalculatorCLI:
     # Initializing each variable thats gonna be used in this class
-    def __init__(self, option, previous_answer, history, x, y):
-        self.option = option
-        self.previous_answer = previous_answer
-        self.history = history
-        self.x = x
-        self.y = y
+    def __init__(self):
+        self.option = None
+        self.previous_answer = 0
+        self.history = []
+        self.x = 0
+        self.y = 0
     # Creating a function that asks for the numbers
     def ask_num(self):
         while True:
@@ -181,7 +181,6 @@ class CalculatorCLI:
             try:
                 if self.option == '1':
                     Calculator.addition(self)
-                    print(self.history)
                 elif self.option == '2':
                     Calculator.subtraction(self)
                 elif self.option == '3':
@@ -302,7 +301,7 @@ class CalculatorCLI:
                     print('\nInvalid choice')
             except OverflowError:
                 print("\nError: Overflow")
-calculator = CalculatorCLI(None, None, [], None, None)
+calculator = CalculatorCLI()
 calculator.ask_num()
 calculator.display_menu()
         
