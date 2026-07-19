@@ -159,6 +159,7 @@ class CalculatorCLI:
     # Creating a function that displays the menu and asks for the option
     def display_menu(self):
         CalculatorHistory.read_data(self)
+        print("--- Calculator ---")
         while True:
             print("\n1. Addition(+)")
             print("2. Subtraction(-)")
